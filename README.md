@@ -20,6 +20,10 @@ This repository contains list of publicly available stories where decision to No
    * Bugs in automatic failover 
    * Everything was a battle; even trying to do backups was really painful, and eventually we gave up on making proper full consistent backups (instead, backing up only the really important tables via complete JSON dumps). We also had a lot of issues with disk usage.
    * The total disk space usage was an order of magnitude less (800GB versus 80GB) – some of our tables had a lot of TEXT fields, and PostgreSQL automatically compresses those, which was a huge win.
+6. Why Shippable Moved from NoSQL MongoDB to PostgreSQL - [Link](http://blog.shippable.com/why-we-moved-from-nosql-mongodb-to-postgressql) - The post outlines following major issues with MongoDB:
+   * MongoDB lacked tooling to handle large databases. In Shippable case, database was around 4TB.
+   * MongoDB took hours to reboot
+   * Schemaless forces developers to handle schema in their code. This makes code ugly and unmanageable
 
 > You will notice that there are more posts criticising MongoDB than any other NoSQL database. I think this has to do with the fact that most people considered MongoDB as replacement for RDBMS. MongoDB ease of use and simple concepts made it easy for developers to adopt it without spending a lot of time grokking its details. Most other NoSQL database were used along with RDBMS so they were not in the critical path.
 
