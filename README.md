@@ -37,6 +37,12 @@ This repository contains list of publicly available stories where decision to No
 
    * There is no way to have the data returned sorted by anything other than the originally defined range (aka sort) key
 
+8. Bye Bye MySQL & MongoDB. Guten Tag PostgreSQL - [Link](https://www.userlike.com/en/blog/bye-by-mysql-and-mongodb-guten-tag-postgresql) - Reasons for moving away from MongoDB as mentioned in the post are:
+
+   * MongoDB consumes absurd amount of memory over time. Since PostgreSQL added JSON support a while ago, we decided to switch over, the biggest upside being one service less to maintain.
+
+
+
 > You will notice that there are more posts criticising MongoDB than any other NoSQL database. I think this has to do with the fact that most people considered MongoDB as replacement for RDBMS. MongoDB ease of use and simple concepts made it easy for developers to adopt it without spending a lot of time grokking its details. Most other NoSQL database were used along with RDBMS so they were not in the critical path.
 
 In last couple of years, developers have again started to embrace relational databases. Even NoSQL databases like MongoDB recently (Feb 2018) added [support for multi-document ACID transactions](https://www.mongodb.com/blog/post/multi-document-transactions-in-mongodb). Not only MongoDB, there are distributed databases like [YugaByte](https://blog.yugabyte.com/yes-we-can-distributed-acid-transactions-with-high-performance/), [NuoDB](https://www.nuodb.com/blog/acid-instrumental-move-saas), and [VoltDB](https://www.voltdb.com/product/features-benefits/acid-transactions/) that also support ACID transactions.
