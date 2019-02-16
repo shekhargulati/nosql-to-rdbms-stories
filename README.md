@@ -45,11 +45,17 @@ This repository contains list of publicly available stories where decision to No
    * MongoDB is not optimised for Group By queries. They were generating reports and as data increased MongoDB performance became a bottleneck.
    * The “no schema” concept of NoSQL is a smaller advantage than we had originally expected. The schema may quickly change at the product’s early days, but later on it stabilizes. It was not too hard to take our JSON format and normalize it into tables, columns, keys, etc.
 
-10. Red Hat Satellite to standardize on PostgreSQL backend - [Link](https://www.redhat.com/en/blog/red-hat-satellite-standardize-postgresql-backend): Red Hat satellite uses two databases - MongoDB and PostgreSQL. The reason for dropping MongoDB as mentioned in the post is
+10. Red Hat Satellite to standardize on PostgreSQL backend - [Link](https://www.redhat.com/en/blog/red-hat-satellite-standardize-postgresql-backend) - Red Hat satellite uses two databases - MongoDB and PostgreSQL. The reason for dropping MongoDB as mentioned in the post is
 
-   * PostgreSQL is a better solution for the types of data and usage that Satellite requires. Also, unifying on a single database backend simplifies the overall architecture of Satellite and can make supportability, backup, and disaster recovery easier.
+  * PostgreSQL is a better solution for the types of data and usage that Satellite requires. Also, unifying on a single database backend simplifies the overall architecture of Satellite and can make supportability, backup, and disaster recovery easier.
 
-   
+11. Bye bye Mongo, Hello Postgres - [Link](https://www.theguardian.com/info/2018/nov/30/bye-bye-mongo-hello-postgres) - This is a detailed post by folks at Guardian. They talked in a step by step manner how they migrated from MongoDB to PostgreSQL. The key points for me in the post are:
+
+   * Mongo does not provide automation scripts to run a managed cluster on AWS
+   * Guardian had multiple outages because of MongoDB. Mongo support was not able to resolve the problems.
+   * Postgres with its JSONB data type can be used to replace Mongo
+
+    
 
 
 
